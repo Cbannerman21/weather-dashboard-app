@@ -16,13 +16,9 @@
         <div class="col-3 search-box">
             <form class="border-bottom border-dark form-group" id="search">
                 <h2 class="search">Search Cities:</h2>
-                <input name="city" class="form-control search" rows="3" id= city />
+                <input name="city" class="form-control search" rows="3" id="city-name"></input>
                 <button type="submit" class="btn btn-primary w-100 search">Search</button>
             </form>
-            <div class="history-container">
-                <h2>Recent Cities</h2>
-                <div id="past-city"></div>
-            </div>
         </div>
         <div class="col-8 city-box">
             <div class="border border-dark-result">
@@ -34,9 +30,13 @@
                     <li class="list-group-item" id="current-humidity"></li>
                 </ul>
             </div>
+            <div class="history-container">
+                <h2>Recent Cities</h2>
+                <div id="past-city"></div>
+            </div>
             <div class="col-13 row">
                 <h2>5-Day Forecast</h2>
-                <div class="forecast" id="five-day">
+                <div class="container" id="five-day">
                     <div class="border border-dark bg-info-card">
                         <h3></h3>
                         <ul class="list-group list-group-flush">
