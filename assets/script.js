@@ -6,8 +6,8 @@ var currentWindEl = document.querySelector("#current-wind");
 var currentHumidityEl = document.querySelector("#current-humidity");
 var currentWeatherImg = document.querySelector("#current-weather-img");
 var fiveDayEl = document.querySelector("#five-day");
-const pastCity = document.querySelector("#past-city");
-var cityArray = JSON.parse(localStorage.getItem("cityArray")) || [];
+var pastCity = document.querySelector("#past-city");
+var cityArray = JSON.parse(localStorage.getItem("cityArray"));
 
 
 
@@ -39,26 +39,9 @@ const getCurrentWeather = async() => {
     pastCity.innerHTML = loadCity;
     };
 
-    var getWeatherData = function (lat, lon) {
-        var apiUrl =
-          "https://api.openweathermap.org/data/2.5/onecall?lat=" +
-          lat +
-          "&lon=" +
-          lon +
-          "&exclude=minutely,hourly&units=imperial&appid=" +
-          apiKey +
-          " ";
-        fetch(apiUrl)
-          .then((response) => response.json())
-          .then((data) => {
-            showData(data);
-            console.log(data);
-          });
-      };
+    
       
      
-    
-
 
 var getWeather = async (event) => {
     event.preventDefault();
